@@ -1,0 +1,246 @@
+{
+  "tool": {
+    "id": "fib-4",
+    "title": "FIB-4 (fibrose hepática)",
+    "short": "Fibrose hepática avançada sem biópsia",
+    "desc": "Calcule o FIB-4 (idade, AST, ALT e plaquetas) para estimar fibrose hepática avançada na doença hepática esteatótica (MASLD) e nas hepatites virais.",
+    "lead": "Índice não invasivo que usa idade, AST, ALT e plaquetas para estimar a probabilidade de fibrose hepática avançada. É o primeiro passo recomendado no rastreamento de fibrose na doença hepática esteatótica.",
+    "spec": [
+      "gastroenterologia",
+      "clinica-medica",
+      "infectologia",
+      "endocrinologia-e-metabologia",
+      "medicina-de-familia-e-comunidade"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "idade",
+        "Idade",
+        "num",
+        {
+          "min": 18,
+          "max": 100,
+          "unit": "anos",
+          "ph": "55"
+        }
+      ],
+      [
+        "ast",
+        "AST (TGO)",
+        "num",
+        {
+          "min": 1,
+          "max": 5000,
+          "unit": "U/L",
+          "ph": "40"
+        }
+      ],
+      [
+        "alt",
+        "ALT (TGP)",
+        "num",
+        {
+          "min": 1,
+          "max": 5000,
+          "unit": "U/L",
+          "ph": "36"
+        }
+      ],
+      [
+        "plq",
+        "Plaquetas",
+        "num",
+        {
+          "min": 5,
+          "max": 1500,
+          "unit": "× 10³/mm³",
+          "ph": "200"
+        }
+      ],
+      [
+        "etio",
+        "Contexto",
+        "radio",
+        {
+          "opts": {
+            "masld": "Esteatose (MASLD/DHGNA)",
+            "viral": "Hepatite C ou HIV/HCV"
+          }
+        }
+      ]
+    ],
+    "formula": "<p>FIB-4 = (idade × AST) ÷ (plaquetas [10⁹/L] × √ALT).</p><p><strong>MASLD:</strong> &lt; 1,30 exclui fibrose avançada (&lt; 2,0 a partir de 65 anos); &gt; 2,67 sugere fibrose avançada. <strong>Hepatite C/HIV:</strong> &lt; 1,45 e &gt; 3,25.</p>",
+    "table": [
+      [
+        "Contexto",
+        "Baixo risco",
+        "Indeterminado",
+        "Alto risco"
+      ],
+      [
+        "MASLD, 36 a 64 anos",
+        "&lt; 1,30",
+        "1,30 a 2,67",
+        "&gt; 2,67"
+      ],
+      [
+        "MASLD, ≥ 65 anos",
+        "&lt; 2,0",
+        "2,0 a 2,67",
+        "&gt; 2,67"
+      ],
+      [
+        "Hepatite C / HIV-HCV",
+        "&lt; 1,45",
+        "1,45 a 3,25",
+        "&gt; 3,25"
+      ]
+    ],
+    "tips": [
+      "Na MASLD, FIB-4 &lt; 1,30 permite seguimento na atenção primária com repetição a cada 1 a 3 anos; valores indeterminados ou altos pedem elastografia.",
+      "Abaixo de 35 anos o desempenho é ruim; a partir de 65 anos, o corte de 1,30 gera muitos falsos positivos (use 2,0).",
+      "Hepatite aguda, elevação de AST por músculo (exercício, miopatia) e plaquetopenia de outra causa distorcem o índice.",
+      "O FIB-4 não serve para acompanhar regressão da fibrose após tratamento antiviral.",
+      "Plaquetas em 10³/mm³ equivalem a 10⁹/L: 200.000/mm³ = 200."
+    ],
+    "sources": [
+      [
+        "Sterling RK et al. Development of a simple noninvasive index to predict significant fibrosis in patients with HIV/HCV coinfection. Hepatology, 2006.",
+        "https://doi.org/10.1002/hep.21178"
+      ],
+      [
+        "Shah AG et al. Comparison of noninvasive markers of fibrosis in patients with nonalcoholic fatty liver disease. Clin Gastroenterol Hepatol, 2009.",
+        "https://doi.org/10.1016/j.cgh.2009.05.033"
+      ],
+      [
+        "McPherson S et al. Age as a confounding factor for the accurate non-invasive diagnosis of advanced NAFLD fibrosis. Am J Gastroenterol, 2017.",
+        "https://doi.org/10.1038/ajg.2016.453"
+      ],
+      [
+        "Rinella ME et al. AASLD Practice Guidance on the clinical assessment and management of nonalcoholic fatty liver disease. Hepatology, 2023.",
+        "https://doi.org/10.1097/HEP.0000000000000323"
+      ]
+    ],
+    "cases": [
+      [
+        "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        {
+          "idade": 45,
+          "ast": 25,
+          "alt": 25,
+          "plq": 250,
+          "etio": "masld"
+        },
+        {
+          "raw": {
+            "fib4": 0.9
+          },
+          "main": "0,90",
+          "level": "low",
+          "tol": 0.001
+        }
+      ],
+      [
+        "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        {
+          "idade": 50,
+          "ast": 40,
+          "alt": 36,
+          "plq": 200,
+          "etio": "masld"
+        },
+        {
+          "raw": {
+            "fib4": 1.6667
+          },
+          "level": "mid",
+          "tol": 0.001
+        }
+      ],
+      [
+        "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        {
+          "idade": 50,
+          "ast": 40,
+          "alt": 36,
+          "plq": 200,
+          "etio": "viral"
+        },
+        {
+          "raw": {
+            "fib4": 1.6667
+          },
+          "level": "mid",
+          "tol": 0.001
+        }
+      ],
+      [
+        "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        {
+          "idade": 70,
+          "ast": 30,
+          "alt": 25,
+          "plq": 200,
+          "etio": "masld"
+        },
+        {
+          "raw": {
+            "fib4": 2.1
+          },
+          "level": "mid",
+          "tol": 0.001
+        }
+      ],
+      [
+        "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        {
+          "idade": 60,
+          "ast": 80,
+          "alt": 49,
+          "plq": 120,
+          "etio": "masld"
+        },
+        {
+          "raw": {
+            "fib4": 5.714
+          },
+          "level": "high",
+          "tol": 0.001
+        }
+      ]
+    ],
+    "batch": "renal-digestivo",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "renal-digestivo",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/renal-digestivo.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 5,
+      "passed": 5,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/renal-digestivo.php",
+    "sha256": "95087d729438637d36e1a49af04d8de0fe1d9f7876443084443906a9281ef107",
+    "bytes": 109421
+  },
+  "clinicalValidation": "not-performed"
+}

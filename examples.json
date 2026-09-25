@@ -1,0 +1,128 @@
+[
+  {
+    "label": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+    "input": {
+      "idade": 45,
+      "ast": 25,
+      "alt": 25,
+      "plq": 250,
+      "etio": "masld"
+    },
+    "expected": {
+      "raw": {
+        "fib4": 0.9
+      },
+      "main": "0,90",
+      "level": "low",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "idade": 45,
+      "ast": 25,
+      "alt": 25,
+      "plq": 250,
+      "etio": "masld"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+    "input": {
+      "idade": 50,
+      "ast": 40,
+      "alt": 36,
+      "plq": 200,
+      "etio": "masld"
+    },
+    "expected": {
+      "raw": {
+        "fib4": 1.6667
+      },
+      "level": "mid",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "idade": 50,
+      "ast": 40,
+      "alt": 36,
+      "plq": 200,
+      "etio": "masld"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+    "input": {
+      "idade": 50,
+      "ast": 40,
+      "alt": 36,
+      "plq": 200,
+      "etio": "viral"
+    },
+    "expected": {
+      "raw": {
+        "fib4": 1.6667
+      },
+      "level": "mid",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "idade": 50,
+      "ast": 40,
+      "alt": 36,
+      "plq": 200,
+      "etio": "viral"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+    "input": {
+      "idade": 70,
+      "ast": 30,
+      "alt": 25,
+      "plq": 200,
+      "etio": "masld"
+    },
+    "expected": {
+      "raw": {
+        "fib4": 2.1
+      },
+      "level": "mid",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "idade": 70,
+      "ast": 30,
+      "alt": 25,
+      "plq": 200,
+      "etio": "masld"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+    "input": {
+      "idade": 60,
+      "ast": 80,
+      "alt": 49,
+      "plq": 120,
+      "etio": "masld"
+    },
+    "expected": {
+      "raw": {
+        "fib4": 5.714
+      },
+      "level": "high",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "idade": 60,
+      "ast": 80,
+      "alt": 49,
+      "plq": 120,
+      "etio": "masld"
+    },
+    "expandedZeroOptions": []
+  }
+]
