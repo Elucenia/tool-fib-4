@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-fib-4",
   "version": "0.1.0",
-  "description": "FIB-4 (fibrose hepática) · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "FIB-4 (fibrose hepática) · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
