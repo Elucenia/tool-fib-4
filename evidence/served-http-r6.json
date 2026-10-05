@@ -1,0 +1,1027 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "fib-4",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/fib-4/calculator.js",
+    "sha256": "c69e33ae5d220ee61438682ee055811b95ce042d81406eac74c3f2c010181285",
+    "bytes": 5170
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 5,
+    "replayed": 5,
+    "passed": 5,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "fib-4",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+      "originalInput": {
+        "idade": 45,
+        "ast": 25,
+        "alt": 25,
+        "plq": 250,
+        "etio": "masld"
+      },
+      "input": {
+        "idade": 45,
+        "ast": 25,
+        "alt": 25,
+        "plq": 250,
+        "etio": "masld"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "fib4": 0.9
+        },
+        "main": "0,90",
+        "level": "low",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "0,90",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 0.9
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": 45,
+            "ast": 25,
+            "alt": 25,
+            "plq": 250,
+            "etio": "masld"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+          "startedAt": "2026-10-05T17:38:00.578Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "fib-4",
+              "main": [
+                "0,90",
+                ""
+              ],
+              "label": "FIB-4",
+              "raw": {
+                "fib4": 0.9
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "128df23ff335e6cf96070dc2103194927bc41c218444d194b58ad292aebe1b13",
+          "bytes": 116,
+          "elapsedMs": 3.2364999999990687
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+        "startedAt": "2026-10-05T17:38:00.578Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "fib-4",
+            "main": [
+              "0,90",
+              ""
+            ],
+            "label": "FIB-4",
+            "raw": {
+              "fib4": 0.9
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "128df23ff335e6cf96070dc2103194927bc41c218444d194b58ad292aebe1b13",
+        "bytes": 116,
+        "elapsedMs": 3.2364999999990687
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "0,90",
+            "obtained": "0,90",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.fib4",
+            "expected": 0.9,
+            "obtained": 0.9,
+            "tolerance": 0.001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.fib4",
+            "expected": 0.9,
+            "obtained": 0.9,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0,90",
+            "obtained": "0,90",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "fib-4",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+      "originalInput": {
+        "idade": 50,
+        "ast": 40,
+        "alt": 36,
+        "plq": 200,
+        "etio": "masld"
+      },
+      "input": {
+        "idade": 50,
+        "ast": 40,
+        "alt": 36,
+        "plq": 200,
+        "etio": "masld"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "fib4": 1.6667
+        },
+        "level": "mid",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "1,67",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 1.666667
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": 50,
+            "ast": 40,
+            "alt": 36,
+            "plq": 200,
+            "etio": "masld"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+          "startedAt": "2026-10-05T17:38:00.890Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "fib-4",
+              "main": [
+                "1,67",
+                ""
+              ],
+              "label": "FIB-4",
+              "raw": {
+                "fib4": 1.666667
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "f3044c4764eab296a956fb8bbb570a408567079375992483007a4dfcae636811",
+          "bytes": 121,
+          "elapsedMs": 2.7691999999806285
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+        "startedAt": "2026-10-05T17:38:00.890Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "fib-4",
+            "main": [
+              "1,67",
+              ""
+            ],
+            "label": "FIB-4",
+            "raw": {
+              "fib4": 1.666667
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "f3044c4764eab296a956fb8bbb570a408567079375992483007a4dfcae636811",
+        "bytes": 121,
+        "elapsedMs": 2.7691999999806285
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.fib4",
+            "expected": 1.6667,
+            "obtained": 1.666667,
+            "tolerance": 0.001,
+            "difference": 0.00003300000000017178,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.fib4",
+            "expected": 1.666667,
+            "obtained": 1.666667,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "1,67",
+            "obtained": "1,67",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "fib-4",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+      "originalInput": {
+        "idade": 50,
+        "ast": 40,
+        "alt": 36,
+        "plq": 200,
+        "etio": "viral"
+      },
+      "input": {
+        "idade": 50,
+        "ast": 40,
+        "alt": 36,
+        "plq": 200,
+        "etio": "viral"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "fib4": 1.6667
+        },
+        "level": "mid",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "1,67",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 1.666667
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": 50,
+            "ast": 40,
+            "alt": 36,
+            "plq": 200,
+            "etio": "viral"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+          "startedAt": "2026-10-05T17:38:01.204Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "fib-4",
+              "main": [
+                "1,67",
+                ""
+              ],
+              "label": "FIB-4",
+              "raw": {
+                "fib4": 1.666667
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "f3044c4764eab296a956fb8bbb570a408567079375992483007a4dfcae636811",
+          "bytes": 121,
+          "elapsedMs": 2.932200000010198
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+        "startedAt": "2026-10-05T17:38:01.204Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "fib-4",
+            "main": [
+              "1,67",
+              ""
+            ],
+            "label": "FIB-4",
+            "raw": {
+              "fib4": 1.666667
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "f3044c4764eab296a956fb8bbb570a408567079375992483007a4dfcae636811",
+        "bytes": 121,
+        "elapsedMs": 2.932200000010198
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.fib4",
+            "expected": 1.6667,
+            "obtained": 1.666667,
+            "tolerance": 0.001,
+            "difference": 0.00003300000000017178,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.fib4",
+            "expected": 1.666667,
+            "obtained": 1.666667,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "1,67",
+            "obtained": "1,67",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "fib-4",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+      "originalInput": {
+        "idade": 70,
+        "ast": 30,
+        "alt": 25,
+        "plq": 200,
+        "etio": "masld"
+      },
+      "input": {
+        "idade": 70,
+        "ast": 30,
+        "alt": 25,
+        "plq": 200,
+        "etio": "masld"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "fib4": 2.1
+        },
+        "level": "mid",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "2,10",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 2.1
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": 70,
+            "ast": 30,
+            "alt": 25,
+            "plq": 200,
+            "etio": "masld"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+          "startedAt": "2026-10-05T17:38:01.519Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "fib-4",
+              "main": [
+                "2,10",
+                ""
+              ],
+              "label": "FIB-4",
+              "raw": {
+                "fib4": 2.1
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "be5a71876ee9fd6c132d19cb65b74388d278d7a10f22286cc3d67de24d914edb",
+          "bytes": 116,
+          "elapsedMs": 2.393500000005588
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+        "startedAt": "2026-10-05T17:38:01.519Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "fib-4",
+            "main": [
+              "2,10",
+              ""
+            ],
+            "label": "FIB-4",
+            "raw": {
+              "fib4": 2.1
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "be5a71876ee9fd6c132d19cb65b74388d278d7a10f22286cc3d67de24d914edb",
+        "bytes": 116,
+        "elapsedMs": 2.393500000005588
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.fib4",
+            "expected": 2.1,
+            "obtained": 2.1,
+            "tolerance": 0.001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.fib4",
+            "expected": 2.1,
+            "obtained": 2.1,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "2,10",
+            "obtained": "2,10",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "fib-4",
+      "kind": "native-source-reference",
+      "index": 4,
+      "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+      "originalInput": {
+        "idade": 60,
+        "ast": 80,
+        "alt": 49,
+        "plq": 120,
+        "etio": "masld"
+      },
+      "input": {
+        "idade": 60,
+        "ast": 80,
+        "alt": 49,
+        "plq": 120,
+        "etio": "masld"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "fib4": 5.714
+        },
+        "level": "high",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "5,71",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 5.714286
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "idade": 60,
+            "ast": 80,
+            "alt": 49,
+            "plq": 120,
+            "etio": "masld"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+          "startedAt": "2026-10-05T17:38:01.833Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "fib-4",
+              "main": [
+                "5,71",
+                ""
+              ],
+              "label": "FIB-4",
+              "raw": {
+                "fib4": 5.714286
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "66c9868fc69f4f20d7d9c11c97bc2f035173dd4c3913bd4f666faff6dfa5f138",
+          "bytes": 121,
+          "elapsedMs": 2.486399999994319
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/fib-4/calculate",
+        "startedAt": "2026-10-05T17:38:01.833Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "fib-4",
+            "main": [
+              "5,71",
+              ""
+            ],
+            "label": "FIB-4",
+            "raw": {
+              "fib4": 5.714286
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "66c9868fc69f4f20d7d9c11c97bc2f035173dd4c3913bd4f666faff6dfa5f138",
+        "bytes": 121,
+        "elapsedMs": 2.486399999994319
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.fib4",
+            "expected": 5.714,
+            "obtained": 5.714286,
+            "tolerance": 0.001,
+            "difference": 0.00028600000000000847,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.fib4",
+            "expected": 5.714286,
+            "obtained": 5.714286,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "5,71",
+            "obtained": "5,71",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}
