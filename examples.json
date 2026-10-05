@@ -1,6 +1,16 @@
 [
   {
-    "label": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+    "id": "fib-4",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+    "originalInput": {
+      "idade": 45,
+      "ast": 25,
+      "alt": 25,
+      "plq": 250,
+      "etio": "masld"
+    },
     "input": {
       "idade": 45,
       "ast": 25,
@@ -16,67 +26,127 @@
       "level": "low",
       "tol": 0.001
     },
+    "recordedResult": {
+      "main": [
+        "0,90",
+        ""
+      ],
+      "label": "FIB-4",
+      "raw": {
+        "fib4": 0.9
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "fib-4",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
     "originalInput": {
-      "idade": 45,
-      "ast": 25,
+      "idade": 50,
+      "ast": 40,
+      "alt": 36,
+      "plq": 200,
+      "etio": "masld"
+    },
+    "input": {
+      "idade": 50,
+      "ast": 40,
+      "alt": 36,
+      "plq": 200,
+      "etio": "masld"
+    },
+    "expected": {
+      "raw": {
+        "fib4": 1.6667
+      },
+      "level": "mid",
+      "tol": 0.001
+    },
+    "recordedResult": {
+      "main": [
+        "1,67",
+        ""
+      ],
+      "label": "FIB-4",
+      "raw": {
+        "fib4": 1.666667
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "fib-4",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+    "originalInput": {
+      "idade": 50,
+      "ast": 40,
+      "alt": 36,
+      "plq": 200,
+      "etio": "viral"
+    },
+    "input": {
+      "idade": 50,
+      "ast": 40,
+      "alt": 36,
+      "plq": 200,
+      "etio": "viral"
+    },
+    "expected": {
+      "raw": {
+        "fib4": 1.6667
+      },
+      "level": "mid",
+      "tol": 0.001
+    },
+    "recordedResult": {
+      "main": [
+        "1,67",
+        ""
+      ],
+      "label": "FIB-4",
+      "raw": {
+        "fib4": 1.666667
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "fib-4",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+    "originalInput": {
+      "idade": 70,
+      "ast": 30,
       "alt": 25,
-      "plq": 250,
-      "etio": "masld"
-    },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
-    "input": {
-      "idade": 50,
-      "ast": 40,
-      "alt": 36,
       "plq": 200,
       "etio": "masld"
     },
-    "expected": {
-      "raw": {
-        "fib4": 1.6667
-      },
-      "level": "mid",
-      "tol": 0.001
-    },
-    "originalInput": {
-      "idade": 50,
-      "ast": 40,
-      "alt": 36,
-      "plq": 200,
-      "etio": "masld"
-    },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
-    "input": {
-      "idade": 50,
-      "ast": 40,
-      "alt": 36,
-      "plq": 200,
-      "etio": "viral"
-    },
-    "expected": {
-      "raw": {
-        "fib4": 1.6667
-      },
-      "level": "mid",
-      "tol": 0.001
-    },
-    "originalInput": {
-      "idade": 50,
-      "ast": 40,
-      "alt": 36,
-      "plq": 200,
-      "etio": "viral"
-    },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
     "input": {
       "idade": 70,
       "ast": 30,
@@ -91,17 +161,37 @@
       "level": "mid",
       "tol": 0.001
     },
-    "originalInput": {
-      "idade": 70,
-      "ast": 30,
-      "alt": 25,
-      "plq": 200,
-      "etio": "masld"
+    "recordedResult": {
+      "main": [
+        "2,10",
+        ""
+      ],
+      "label": "FIB-4",
+      "raw": {
+        "fib4": 2.1
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+    "id": "fib-4",
+    "kind": "native-source-reference",
+    "index": 4,
+    "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+    "originalInput": {
+      "idade": 60,
+      "ast": 80,
+      "alt": 49,
+      "plq": 120,
+      "etio": "masld"
+    },
     "input": {
       "idade": 60,
       "ast": 80,
@@ -116,13 +206,23 @@
       "level": "high",
       "tol": 0.001
     },
-    "originalInput": {
-      "idade": 60,
-      "ast": 80,
-      "alt": 49,
-      "plq": 120,
-      "etio": "masld"
+    "recordedResult": {
+      "main": [
+        "5,71",
+        ""
+      ],
+      "label": "FIB-4",
+      "raw": {
+        "fib4": 5.714286
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

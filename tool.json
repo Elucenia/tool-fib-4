@@ -5,6 +5,7 @@
     "short": "Fibrose hepática avançada sem biópsia",
     "desc": "Calcule o FIB-4 (idade, AST, ALT e plaquetas) para estimar fibrose hepática avançada na doença hepática esteatótica (MASLD) e nas hepatites virais.",
     "lead": "Índice não invasivo que usa idade, AST, ALT e plaquetas para estimar a probabilidade de fibrose hepática avançada. É o primeiro passo recomendado no rastreamento de fibrose na doença hepática esteatótica.",
+    "kind": "Calculadora",
     "spec": [
       "gastroenterologia",
       "clinica-medica",
@@ -12,7 +13,6 @@
       "endocrinologia-e-metabologia",
       "medicina-de-familia-e-comunidade"
     ],
-    "tier": 1,
     "fields": [
       [
         "idade",
@@ -71,39 +71,6 @@
       ]
     ],
     "formula": "<p>FIB-4 = (idade × AST) ÷ (plaquetas [10⁹/L] × √ALT).</p><p><strong>MASLD:</strong> &lt; 1,30 exclui fibrose avançada (&lt; 2,0 a partir de 65 anos); &gt; 2,67 sugere fibrose avançada. <strong>Hepatite C/HIV:</strong> &lt; 1,45 e &gt; 3,25.</p>",
-    "table": [
-      [
-        "Contexto",
-        "Baixo risco",
-        "Indeterminado",
-        "Alto risco"
-      ],
-      [
-        "MASLD, 36 a 64 anos",
-        "&lt; 1,30",
-        "1,30 a 2,67",
-        "&gt; 2,67"
-      ],
-      [
-        "MASLD, ≥ 65 anos",
-        "&lt; 2,0",
-        "2,0 a 2,67",
-        "&gt; 2,67"
-      ],
-      [
-        "Hepatite C / HIV-HCV",
-        "&lt; 1,45",
-        "1,45 a 3,25",
-        "&gt; 3,25"
-      ]
-    ],
-    "tips": [
-      "Na MASLD, FIB-4 &lt; 1,30 permite seguimento na atenção primária com repetição a cada 1 a 3 anos; valores indeterminados ou altos pedem elastografia.",
-      "Abaixo de 35 anos o desempenho é ruim; a partir de 65 anos, o corte de 1,30 gera muitos falsos positivos (use 2,0).",
-      "Hepatite aguda, elevação de AST por músculo (exercício, miopatia) e plaquetopenia de outra causa distorcem o índice.",
-      "O FIB-4 não serve para acompanhar regressão da fibrose após tratamento antiviral.",
-      "Plaquetas em 10³/mm³ equivalem a 10⁹/L: 200.000/mm³ = 200."
-    ],
     "sources": [
       [
         "Sterling RK et al. Development of a simple noninvasive index to predict significant fibrosis in patients with HIV/HCV coinfection. Hepatology, 2006.",
@@ -210,9 +177,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -221,17 +185,230 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T01:05:00.913Z",
+      "total": 40,
+      "passed": 40,
+      "evidencePath": "reports/review-20261003/additional-native-formula-source-oracles-final19.json",
+      "evidenceSha256": "ec8e8eb58ca9b6360c10490e7f4943d559ab06f68c81fba8ffb757f9477d5fb6",
+      "scope": "Formula only, age × AST / (platelets × square root of ALT). Original study: 832 HIV/HCV patients, 555 derivation and 277 validation. MASLD cutoffs, fibrosis classification and clinical eligibility are outside this numeric test.",
+      "source": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16729309/",
+        "edition": "Sterling et al 2006, DOI 10.1002/hep.21178",
+        "locator": "Primary abstract: formula and original HIV/HCV study population",
+        "access": "Primary PubMed abstract read; full text was not used.",
+        "scope": "Formula only, age × AST / (platelets × square root of ALT). Original study: 832 HIV/HCV patients, 555 derivation and 277 validation. MASLD cutoffs, fibrosis classification and clinical eligibility are outside this numeric test."
+      },
+      "executionBuild": {
+        "id": "IguaqI9wAzb-9t1Sb-4Ph",
+        "directory": ".next-private-final19"
+      },
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "fullSourceConformanceApproval": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "FIB 4/Sterling 2006; limiares HCV/HIV 1,45/3,25 vs MASLD 1,3/2,67 e≥65 anos 2,0",
+    "implementationVersion": "fib-4@native-2026-10-03+c69e33ae5d22",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/16729309/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "FIB-4 = (idade × AST) ÷ (plaquetas [10⁹/L] × √ALT). MASLD: < 1,30 exclui fibrose avançada (< 2,0 a partir de 65 anos); > 2,67 sugere fibrose avançada. Hepatite C/HIV: < 1,45 e > 3,25.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "idade",
+            "label": "Idade",
+            "type": "num",
+            "min": 18,
+            "max": 100,
+            "unit": "anos",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "ast",
+            "label": "AST (TGO)",
+            "type": "num",
+            "min": 1,
+            "max": 5000,
+            "unit": "U/L",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "alt",
+            "label": "ALT (TGP)",
+            "type": "num",
+            "min": 1,
+            "max": 5000,
+            "unit": "U/L",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "plq",
+            "label": "Plaquetas",
+            "type": "num",
+            "min": 5,
+            "max": 1500,
+            "unit": "× 10³/mm³",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "etio",
+            "label": "Contexto",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "masld": "Esteatose (MASLD/DHGNA)",
+              "viral": "Hepatite C ou HIV/HCV"
+            }
+          }
+        ],
+        "hash": "5d10250d1c6314b9075e994549e4bf4862dcf3cb56b6506f51b679ca5fd6de16"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Sterling RK et al. Development of a simple noninvasive index to predict significant fibrosis in patients with HIV/HCV coinfection. Hepatology, 2006.",
+          "url": "https://doi.org/10.1002/hep.21178",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Development of a simple noninvasive index to predict significant fibrosis in patients with HIV/HCV coinfection.",
+            "year": "2006",
+            "firstPublicationDate": "2006-06-01",
+            "doi": "10.1002/hep.21178",
+            "pmid": "16729309",
+            "journal": "Hepatology (Baltimore, Md.)",
+            "authors": "Sterling RK, Lissen E, Clumeck N, Sola R, Correa MC, Montaner J, S Sulkowski M, Torriani FJ, Dieterich DT, Thomas DL, Messinger D, Nelson M, APRICOT Clinical Investigators."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/16729309/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "b9e8914f76e30ef2c39f79fffed1935196ffe8f26a7a9cd8f3f05eefd15705f5",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Shah AG et al. Comparison of noninvasive markers of fibrosis in patients with nonalcoholic fatty liver disease. Clin Gastroenterol Hepatol, 2009.",
+          "url": "https://doi.org/10.1016/j.cgh.2009.05.033",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Comparison of noninvasive markers of fibrosis in patients with nonalcoholic fatty liver disease.",
+            "year": "2009",
+            "firstPublicationDate": "2009-06-10",
+            "doi": "10.1016/j.cgh.2009.05.033",
+            "pmid": "19523535",
+            "pmcid": "PMC3079239",
+            "journal": "Clinical gastroenterology and hepatology : the official clinical practice journal of the American Gastroenterological Association",
+            "authors": "Shah AG, Lydecker A, Murray K, Tetri BN, Contos MJ, Sanyal AJ, Nash Clinical Research Network."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3079239/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "bd8a206751179fee0ef9d76eef61f130832f1b3ede4536464f07a17f356619c7",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "McPherson S et al. Age as a confounding factor for the accurate non-invasive diagnosis of advanced NAFLD fibrosis. Am J Gastroenterol, 2017.",
+          "url": "https://doi.org/10.1038/ajg.2016.453",
+          "class": "primary-publication-full-text-retrieved",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": true,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Age as a Confounding Factor for the Accurate Non-Invasive Diagnosis of Advanced NAFLD Fibrosis.",
+            "year": "2017",
+            "firstPublicationDate": "2016-10-11",
+            "doi": "10.1038/ajg.2016.453",
+            "pmid": "27725647",
+            "pmcid": "PMC5418560",
+            "journal": "The American journal of gastroenterology",
+            "authors": "McPherson S, Hardy T, Dufour JF, Petta S, Romero-Gomez M, Allison M, Oliveira CP, Francque S, Van Gaal L, Schattenberg JM, Tiniakos D, Burt A, Bugianesi E, Ratziu V, Day CP, Anstee QM."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5418560/",
+          "abstractAvailable": true,
+          "fullTextSha256": "dd3c432d7ff4334acc144b41dafd57e59ab58ec3c095fda3594e6e4fda0bae8a",
+          "abstractSha256": "77305fd43610a3debb8aa45e5f6c0665320385c8fc68c28398b0d1ac0a2032e0",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Rinella ME et al. AASLD Practice Guidance on the clinical assessment and management of nonalcoholic fatty liver disease. Hepatology, 2023.",
+          "url": "https://doi.org/10.1097/HEP.0000000000000323",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "AASLD Practice Guidance on the clinical assessment and management of nonalcoholic fatty liver disease.",
+            "year": "2023",
+            "firstPublicationDate": "2023-03-17",
+            "doi": "10.1097/hep.0000000000000323",
+            "pmid": "36727674",
+            "pmcid": "PMC10735173",
+            "journal": "Hepatology (Baltimore, Md.)",
+            "authors": "Rinella ME, Neuschwander-Tetri BA, Siddiqui MS, Abdelmalek MF, Caldwell S, Barb D, Kleiner DE, Loomba R."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10735173/",
+          "abstractAvailable": false,
+          "fullTextSha256": null,
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T01:05:00.913Z",
+        "total": 40,
+        "passed": 40,
+        "evidencePath": "reports/review-20261003/additional-native-formula-source-oracles-final19.json",
+        "evidenceSha256": "ec8e8eb58ca9b6360c10490e7f4943d559ab06f68c81fba8ffb757f9477d5fb6",
+        "scope": "Formula only, age × AST / (platelets × square root of ALT). Original study: 832 HIV/HCV patients, 555 derivation and 277 validation. MASLD cutoffs, fibrosis classification and clinical eligibility are outside this numeric test."
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "c69e33ae5d220ee61438682ee055811b95ce042d81406eac74c3f2c010181285"
+    },
+    "limits": "O FIB-4 de Sterling 2006 foi desenvolvido em pacientes com coinfecção HIV/HCV, com cortes <1,45 e >3,25 avaliados contra fibrose Ishak 4–6. A fórmula usa idade em anos, AST e ALT em U/L e plaquetas em 10^9/L. Esses cortes e a população original não são intercambiáveis automaticamente com critérios MASLD ou ajustes por idade; essas variantes exigem suas próprias fontes.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.966Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Critérios atuais MASLD, ajuste de idade e uso durante doença aguda dependem de fontes distintas ainda não lidas nesta revisão."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/fib-4/calculator.js",
+    "bytes": 5170,
+    "sha256": "c69e33ae5d220ee61438682ee055811b95ce042d81406eac74c3f2c010181285"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "73c8270d83cdce5d4e848851ce13680d4f5706f96dfa95208bfb6444e89cbdf2",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 40,
+      "sha256": "dfba6b38b06da5a62948d82f84bbff75a8ce8f789fb8f6a6b7c4c0c5d5ce4232",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

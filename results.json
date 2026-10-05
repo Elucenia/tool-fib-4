@@ -1,0 +1,439 @@
+{
+  "id": "fib-4",
+  "at": "2026-10-05T17:29:33.616Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/fib-4/calculator.js",
+    "bytes": 5170,
+    "sha256": "c69e33ae5d220ee61438682ee055811b95ce042d81406eac74c3f2c010181285"
+  },
+  "cases": [
+    {
+      "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+      "input": {
+        "idade": 45,
+        "ast": 25,
+        "alt": 25,
+        "plq": 250,
+        "etio": "masld"
+      },
+      "obtained": {
+        "id": "fib-4",
+        "main": [
+          "0,90",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 0.9
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "0,90",
+          "obtained": "0,90",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.fib4",
+          "expected": 0.9,
+          "obtained": 0.9,
+          "tolerance": 0.001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fib4",
+          "expected": 0.9,
+          "obtained": 0.9,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0,90",
+          "obtained": "0,90",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+      "input": {
+        "idade": 50,
+        "ast": 40,
+        "alt": 36,
+        "plq": 200,
+        "etio": "masld"
+      },
+      "obtained": {
+        "id": "fib-4",
+        "main": [
+          "1,67",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 1.666667
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.fib4",
+          "expected": 1.6667,
+          "obtained": 1.666667,
+          "tolerance": 0.001,
+          "difference": 0.00003300000000017178,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fib4",
+          "expected": 1.666667,
+          "obtained": 1.666667,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "1,67",
+          "obtained": "1,67",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+      "input": {
+        "idade": 50,
+        "ast": 40,
+        "alt": 36,
+        "plq": 200,
+        "etio": "viral"
+      },
+      "obtained": {
+        "id": "fib-4",
+        "main": [
+          "1,67",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 1.666667
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.fib4",
+          "expected": 1.6667,
+          "obtained": 1.666667,
+          "tolerance": 0.001,
+          "difference": 0.00003300000000017178,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fib4",
+          "expected": 1.666667,
+          "obtained": 1.666667,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "1,67",
+          "obtained": "1,67",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+      "input": {
+        "idade": 70,
+        "ast": 30,
+        "alt": 25,
+        "plq": 200,
+        "etio": "masld"
+      },
+      "obtained": {
+        "id": "fib-4",
+        "main": [
+          "2,10",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 2.1
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.fib4",
+          "expected": 2.1,
+          "obtained": 2.1,
+          "tolerance": 0.001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fib4",
+          "expected": 2.1,
+          "obtained": 2.1,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "2,10",
+          "obtained": "2,10",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+      "input": {
+        "idade": 60,
+        "ast": 80,
+        "alt": 49,
+        "plq": 120,
+        "etio": "masld"
+      },
+      "obtained": {
+        "id": "fib-4",
+        "main": [
+          "5,71",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 5.714286
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.fib4",
+          "expected": 5.714,
+          "obtained": 5.714286,
+          "tolerance": 0.001,
+          "difference": 0.00028600000000000847,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.fib4",
+          "expected": 5.714286,
+          "obtained": 5.714286,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "5,71",
+          "obtained": "5,71",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 47,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}
