@@ -1,0 +1,731 @@
+{
+  "id": "fib-4",
+  "implementationVersion": "fib-4@native-2026-10-05+ca5bdc8f99cd",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Baixa probabilidade de fibrose avançada (FIB-4 < 1,30)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Resultado indeterminado: complementar com elastografia",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Resultado indeterminado: complementar com elastografia",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Resultado indeterminado: complementar com elastografia",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "A partir de 65 anos (DHGNA/MASLD), o corte inferior usado é 2,0.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Alta probabilidade de fibrose avançada (FIB-4 > 2,67)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Low probability of advanced fibrosis (FIB-4 < 1.30)",
+            "locale": "en",
+            "template": "documented-authored-6c27a3498d82130fd8b1",
+            "sourceNumbers": [
+              1.3
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Indeterminate result: supplement with elastography",
+            "locale": "en",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Indeterminate result: supplement with elastography",
+            "locale": "en",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Indeterminate result: supplement with elastography",
+            "locale": "en",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "note": {
+            "text": "From 65 years of age (NAFLD/MASLD), the lower cutoff used is 2.0.",
+            "locale": "en",
+            "template": "documented-authored-7577d3bc5d54270b4991"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "High probability of advanced fibrosis (FIB-4 > 2.67)",
+            "locale": "en",
+            "template": "documented-authored-35dd8049d32a5abd9a08",
+            "sourceNumbers": [
+              2.67
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Baja probabilidad de fibrosis avanzada (FIB-4 < 1,30)",
+            "locale": "es",
+            "template": "documented-authored-6c27a3498d82130fd8b1",
+            "sourceNumbers": [
+              1.3
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Resultado indeterminado: complementar con elastografía",
+            "locale": "es",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Resultado indeterminado: complementar con elastografía",
+            "locale": "es",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Resultado indeterminado: complementar con elastografía",
+            "locale": "es",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "note": {
+            "text": "A partir de los 65 años (DHGNA/MASLD), el punto de corte inferior utilizado es 2,0.",
+            "locale": "es",
+            "template": "documented-authored-7577d3bc5d54270b4991"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Alta probabilidad de fibrosis avanzada (FIB-4 > 2,67)",
+            "locale": "es",
+            "template": "documented-authored-35dd8049d32a5abd9a08",
+            "sourceNumbers": [
+              2.67
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Faible probabilité de fibrose avancée (FIB-4 < 1,30)",
+            "locale": "fr",
+            "template": "documented-authored-6c27a3498d82130fd8b1",
+            "sourceNumbers": [
+              1.3
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Résultat indéterminé : compléter par élastographie",
+            "locale": "fr",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Résultat indéterminé : compléter par élastographie",
+            "locale": "fr",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Résultat indéterminé : compléter par élastographie",
+            "locale": "fr",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "note": {
+            "text": "À partir de 65 ans (stéatose hépatique non alcoolique/MASLD), le seuil inférieur utilisé est 2,0.",
+            "locale": "fr",
+            "template": "documented-authored-7577d3bc5d54270b4991"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Forte probabilité de fibrose avancée (FIB-4 > 2,67)",
+            "locale": "fr",
+            "template": "documented-authored-35dd8049d32a5abd9a08",
+            "sourceNumbers": [
+              2.67
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Geringe Wahrscheinlichkeit einer fortgeschrittenen Fibrose (FIB-4 < 1,30)",
+            "locale": "de",
+            "template": "documented-authored-6c27a3498d82130fd8b1",
+            "sourceNumbers": [
+              1.3
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Unbestimmtes Ergebnis: mit Elastographie ergänzen",
+            "locale": "de",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Unbestimmtes Ergebnis: mit Elastographie ergänzen",
+            "locale": "de",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Unbestimmtes Ergebnis: mit Elastographie ergänzen",
+            "locale": "de",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "note": {
+            "text": "Ab 65 Jahren (NAFLD/MASLD) beträgt der verwendete untere Grenzwert 2,0.",
+            "locale": "de",
+            "template": "documented-authored-7577d3bc5d54270b4991"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Hohe Wahrscheinlichkeit einer fortgeschrittenen Fibrose (FIB-4 > 2,67)",
+            "locale": "de",
+            "template": "documented-authored-35dd8049d32a5abd9a08",
+            "sourceNumbers": [
+              2.67
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Bassa probabilità di fibrosi avanzata (FIB-4 < 1,30)",
+            "locale": "it",
+            "template": "documented-authored-6c27a3498d82130fd8b1",
+            "sourceNumbers": [
+              1.3
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risultato indeterminato: integrare con elastografia",
+            "locale": "it",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risultato indeterminato: integrare con elastografia",
+            "locale": "it",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Risultato indeterminato: integrare con elastografia",
+            "locale": "it",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "note": {
+            "text": "A partire dai 65 anni (NAFLD/MASLD), il cut-off inferiore utilizzato è 2,0.",
+            "locale": "it",
+            "template": "documented-authored-7577d3bc5d54270b4991"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Alta probabilità di fibrosi avanzata (FIB-4 > 2,67)",
+            "locale": "it",
+            "template": "documented-authored-35dd8049d32a5abd9a08",
+            "sourceNumbers": [
+              2.67
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "احتمال منخفض للتليف المتقدم (FIB-4 < ١٫٣٠)",
+            "locale": "ar",
+            "template": "documented-authored-6c27a3498d82130fd8b1",
+            "sourceNumbers": [
+              1.3
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "نتيجة غير حاسمة: استكمالها بالتصوير المرن",
+            "locale": "ar",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "نتيجة غير حاسمة: استكمالها بالتصوير المرن",
+            "locale": "ar",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "نتيجة غير حاسمة: استكمالها بالتصوير المرن",
+            "locale": "ar",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "note": {
+            "text": "ابتداءً من 65 سنة (DHGNA/MASLD)، تكون قيمة القطع الدنيا المستخدمة هي 2,0.",
+            "locale": "ar",
+            "template": "documented-authored-7577d3bc5d54270b4991"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "احتمال مرتفع للتليف المتقدم (FIB-4 > ٢٫٦٧)",
+            "locale": "ar",
+            "template": "documented-authored-35dd8049d32a5abd9a08",
+            "sourceNumbers": [
+              2.67
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "进展期纤维化概率低（FIB-4 < 1.30）",
+            "locale": "zh",
+            "template": "documented-authored-6c27a3498d82130fd8b1",
+            "sourceNumbers": [
+              1.3
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "结果不确定：补充弹性成像",
+            "locale": "zh",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "结果不确定：补充弹性成像",
+            "locale": "zh",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "结果不确定：补充弹性成像",
+            "locale": "zh",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "note": {
+            "text": "从 65 岁起（DHGNA/MASLD），所用的下限截点为 2,0。",
+            "locale": "zh",
+            "template": "documented-authored-7577d3bc5d54270b4991"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "进展期纤维化概率高（FIB-4 > 2.67）",
+            "locale": "zh",
+            "template": "documented-authored-35dd8049d32a5abd9a08",
+            "sourceNumbers": [
+              2.67
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "進行した線維化の可能性が低い（FIB-4 < 1.30）",
+            "locale": "ja",
+            "template": "documented-authored-6c27a3498d82130fd8b1",
+            "sourceNumbers": [
+              1.3
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "判定不能の結果：エラストグラフィーを追加する",
+            "locale": "ja",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "判定不能の結果：エラストグラフィーを追加する",
+            "locale": "ja",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "判定不能の結果：エラストグラフィーを追加する",
+            "locale": "ja",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "note": {
+            "text": "65歳以上（DHGNA/MASLD）では、使用される下限カットオフは 2,0 です。",
+            "locale": "ja",
+            "template": "documented-authored-7577d3bc5d54270b4991"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "進行した線維化の可能性が高い（FIB-4 > 2.67）",
+            "locale": "ja",
+            "template": "documented-authored-35dd8049d32a5abd9a08",
+            "sourceNumbers": [
+              2.67
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "उन्नत फाइब्रोसिस की कम संभावना (FIB-4 < 1.30)",
+            "locale": "hi",
+            "template": "documented-authored-6c27a3498d82130fd8b1",
+            "sourceNumbers": [
+              1.3
+            ]
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "अनिर्णीत परिणाम: इलास्टोग्राफी से पूरक करें",
+            "locale": "hi",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "अनिर्णीत परिणाम: इलास्टोग्राफी से पूरक करें",
+            "locale": "hi",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "अनिर्णीत परिणाम: इलास्टोग्राफी से पूरक करें",
+            "locale": "hi",
+            "template": "documented-authored-8460cfc7d17f7abc5572"
+          },
+          "note": {
+            "text": "65 वर्ष की आयु से (DHGNA/MASLD), उपयोग किया जाने वाला निचला कटऑफ 2,0 है।",
+            "locale": "hi",
+            "template": "documented-authored-7577d3bc5d54270b4991"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "उन्नत फाइब्रोसिस की उच्च संभावना (FIB-4 > 2.67)",
+            "locale": "hi",
+            "template": "documented-authored-35dd8049d32a5abd9a08",
+            "sourceNumbers": [
+              2.67
+            ]
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

@@ -90,3 +90,34 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Low probability of advanced fibrosis (FIB-4 < 1.30)
+
+
+### 2
+
+Indeterminate result: supplement with elastography
+
+
+### 3
+
+Indeterminate result: supplement with elastography
+
+
+### 4
+
+Indeterminate result: supplement with elastography
+
+From 65 years of age (NAFLD/MASLD), the lower cutoff used is 2.0.
+
+
+### 5
+
+High probability of advanced fibrosis (FIB-4 > 2.67)
+

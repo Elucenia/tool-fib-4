@@ -209,7 +209,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "FIB 4/Sterling 2006; limiares HCV/HIV 1,45/3,25 vs MASLD 1,3/2,67 e≥65 anos 2,0",
-    "implementationVersion": "fib-4@native-2026-10-03+c69e33ae5d22",
+    "implementationVersion": "fib-4@native-2026-10-05+ca5bdc8f99cd",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/16729309/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -378,7 +378,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "c69e33ae5d220ee61438682ee055811b95ce042d81406eac74c3f2c010181285"
+      "implementationHash": "ca5bdc8f99cd4df5ad48a8eb14210069160b44778906ad82f982306180b9af04",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "fib-4@native-2026-10-03+c69e33ae5d22",
+          "previousImplementationHash": "c69e33ae5d220ee61438682ee055811b95ce042d81406eac74c3f2c010181285",
+          "implementationHash": "ca5bdc8f99cd4df5ad48a8eb14210069160b44778906ad82f982306180b9af04",
+          "scientificBodySha256": "78da366424bd1679c2905ed17913c7a729be8bf11c44f587cdcbddd2ccd5ccc8",
+          "metadataContractHash": "5d10250d1c6314b9075e994549e4bf4862dcf3cb56b6506f51b679ca5fd6de16",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O FIB-4 de Sterling 2006 foi desenvolvido em pacientes com coinfecção HIV/HCV, com cortes <1,45 e >3,25 avaliados contra fibrose Ishak 4–6. A fórmula usa idade em anos, AST e ALT em U/L e plaquetas em 10^9/L. Esses cortes e a população original não são intercambiáveis automaticamente com critérios MASLD ou ajustes por idade; essas variantes exigem suas próprias fontes.",
     "sourceLimitEvidence": {
@@ -397,15 +425,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/fib-4/calculator.js",
-    "bytes": 5170,
-    "sha256": "c69e33ae5d220ee61438682ee055811b95ce042d81406eac74c3f2c010181285"
+    "bytes": 5375,
+    "sha256": "ca5bdc8f99cd4df5ad48a8eb14210069160b44778906ad82f982306180b9af04"
   },
-  "sourceToolSha256": "73c8270d83cdce5d4e848851ce13680d4f5706f96dfa95208bfb6444e89cbdf2",
+  "sourceToolSha256": "861961219fc996f9560be4741d33e403fa71dfad1fd186812a1c6d06115c87a6",
   "omittedFullReferenceBanks": [
     {
       "rows": 40,
       "sha256": "dfba6b38b06da5a62948d82f84bbff75a8ce8f789fb8f6a6b7c4c0c5d5ce4232",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

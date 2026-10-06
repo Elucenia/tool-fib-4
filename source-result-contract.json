@@ -1,0 +1,289 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "fib-4",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "e66f2f668f5b390ca42b857e75fa235a133b46c7",
+    "oldEngineSha256": "c69e33ae5d220ee61438682ee055811b95ce042d81406eac74c3f2c010181285",
+    "currentEngineSha256": "ca5bdc8f99cd4df5ad48a8eb14210069160b44778906ad82f982306180b9af04"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "45 anos, AST 25, ALT 25, plaquetas 250, MASLD: 0,90 (baixo)",
+      "input": {
+        "idade": 45,
+        "ast": 25,
+        "alt": 25,
+        "plq": 250,
+        "etio": "masld"
+      },
+      "publicOutput": {
+        "id": "fib-4",
+        "main": [
+          "0,90",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 0.9
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fib4": 0.9
+        },
+        "main": "0,90",
+        "level": "low",
+        "tol": 0.001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0,90",
+          ""
+        ],
+        "label": "FIB-4",
+        "level": "low",
+        "verdict": "Baixa probabilidade de fibrose avançada (FIB-4 &lt; 1,30)",
+        "note": "",
+        "raw": {
+          "fib4": 0.9
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "50 anos, AST 40, ALT 36, plaquetas 200, MASLD: 1,67 (indeterminado)",
+      "input": {
+        "idade": 50,
+        "ast": 40,
+        "alt": 36,
+        "plq": 200,
+        "etio": "masld"
+      },
+      "publicOutput": {
+        "id": "fib-4",
+        "main": [
+          "1,67",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 1.666667
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fib4": 1.6667
+        },
+        "level": "mid",
+        "tol": 0.001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "1,67",
+          ""
+        ],
+        "label": "FIB-4",
+        "level": "mid",
+        "verdict": "Resultado indeterminado: complementar com elastografia",
+        "note": "",
+        "raw": {
+          "fib4": 1.666667
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Mesmos valores em hepatite C: 1,67 (indeterminado, corte 1,45)",
+      "input": {
+        "idade": 50,
+        "ast": 40,
+        "alt": 36,
+        "plq": 200,
+        "etio": "viral"
+      },
+      "publicOutput": {
+        "id": "fib-4",
+        "main": [
+          "1,67",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 1.666667
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fib4": 1.6667
+        },
+        "level": "mid",
+        "tol": 0.001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "1,67",
+          ""
+        ],
+        "label": "FIB-4",
+        "level": "mid",
+        "verdict": "Resultado indeterminado: complementar com elastografia",
+        "note": "",
+        "raw": {
+          "fib4": 1.666667
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 3,
+      "name": "70 anos, AST 30, ALT 25, plaquetas 200, MASLD: 2,10 (indeterminado pelo corte de 2,0)",
+      "input": {
+        "idade": 70,
+        "ast": 30,
+        "alt": 25,
+        "plq": 200,
+        "etio": "masld"
+      },
+      "publicOutput": {
+        "id": "fib-4",
+        "main": [
+          "2,10",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 2.1
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fib4": 2.1
+        },
+        "level": "mid",
+        "tol": 0.001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "2,10",
+          ""
+        ],
+        "label": "FIB-4",
+        "level": "mid",
+        "verdict": "Resultado indeterminado: complementar com elastografia",
+        "note": "A partir de 65 anos (DHGNA/MASLD), o corte inferior usado é 2,0.",
+        "raw": {
+          "fib4": 2.1
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 4,
+      "name": "60 anos, AST 80, ALT 49, plaquetas 120: 5,71 (alto)",
+      "input": {
+        "idade": 60,
+        "ast": 80,
+        "alt": 49,
+        "plq": 120,
+        "etio": "masld"
+      },
+      "publicOutput": {
+        "id": "fib-4",
+        "main": [
+          "5,71",
+          ""
+        ],
+        "label": "FIB-4",
+        "raw": {
+          "fib4": 5.714286
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "fib4": 5.714
+        },
+        "level": "high",
+        "tol": 0.001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "5,71",
+          ""
+        ],
+        "label": "FIB-4",
+        "level": "high",
+        "verdict": "Alta probabilidade de fibrose avançada (FIB-4 &gt; 2,67)",
+        "note": "",
+        "raw": {
+          "fib4": 5.714286
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    }
+  ]
+}

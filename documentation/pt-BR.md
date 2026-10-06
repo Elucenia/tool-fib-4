@@ -90,3 +90,34 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Baixa probabilidade de fibrose avançada (FIB-4 < 1,30)
+
+
+### 2
+
+Resultado indeterminado: complementar com elastografia
+
+
+### 3
+
+Resultado indeterminado: complementar com elastografia
+
+
+### 4
+
+Resultado indeterminado: complementar com elastografia
+
+A partir de 65 anos (DHGNA/MASLD), o corte inferior usado é 2,0.
+
+
+### 5
+
+Alta probabilidade de fibrose avançada (FIB-4 > 2,67)
+

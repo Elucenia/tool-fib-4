@@ -90,3 +90,34 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Faible probabilité de fibrose avancée (FIB-4 < 1,30)
+
+
+### 2
+
+Résultat indéterminé : compléter par élastographie
+
+
+### 3
+
+Résultat indéterminé : compléter par élastographie
+
+
+### 4
+
+Résultat indéterminé : compléter par élastographie
+
+À partir de 65 ans (stéatose hépatique non alcoolique/MASLD), le seuil inférieur utilisé est 2,0.
+
+
+### 5
+
+Forte probabilité de fibrose avancée (FIB-4 > 2,67)
+
